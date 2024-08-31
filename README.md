@@ -25,11 +25,13 @@ This application is a food ordering module designed specifically for a POS (Poin
 
 The app is organized using the **Atomic Design methodology** (Organism methodology), which breaks down the UI into independent, reusable components. This structure is highly beneficial for scaling the project, ensuring maintainability, and promoting consistency across the application.
 
-- **Atoms:** Basic building blocks like buttons, text inputs, and icons.
-- **Molecules:** Combinations of atoms working together, such as form fields or a card with an image and text.
-- **Organisms:** More complex UI elements composed of molecules and atoms, like a menu list or a cart summary.
-- **Templates:** Layouts that arrange organisms to form pages.
-- **Pages:** Final views rendered to the user.
+- **atoms:** Basic building blocks like buttons, text inputs, and icons.
+- **molecules:** Combinations of atoms working together, such as form fields or a card with an image and text.
+- **organisms:** More complex UI elements composed of molecules and atoms, like a menu list or a cart summary.
+- **appComponents:** Layouts that arrange organisms to form pages.
+- **screen:** Final views rendered to the user.
+- **adapters:** This directory contains modules responsible for managing external connections, such as APIs or third-party services. It acts as an interface between the app and external data sources, ensuring a clean separation of concerns and making it easier to swap out or update integrations without affecting the core application logic.
+- **state:** : This folder houses the application's state management logic, including slices and API fetching functions. Slices define individual pieces of state and their corresponding reducers, while API fetching functions handle data retrieval from external sources. This structure promotes organized and maintainable state management, allowing for scalable and efficient handling of the application's data flow.
 
 ### Styling
 
