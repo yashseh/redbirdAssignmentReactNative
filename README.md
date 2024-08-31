@@ -1,6 +1,6 @@
-Here's a revised and extended version of your documentation:
+## Demo Video
 
----
+## [Watch the demo on Loom](https://www.loom.com/share/9c8bf41c90874d199765e3625629f2b5?sid=d9249fe6-3c1b-40f3-ab45-6faa521f68b4)
 
 # Restaurant POS System - Food Ordering Module
 
