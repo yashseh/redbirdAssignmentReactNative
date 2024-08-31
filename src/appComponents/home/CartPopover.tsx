@@ -45,8 +45,8 @@ const CartPopover: React.FC<ICartPopoverProps> = ({children, styles}) => {
       {children}
       {cartProducts.length > 0 && products.length > 0 && (
         <Animated.View
-          entering={FadeInDown}
-          exiting={FadeOutDown}
+          // entering={FadeInDown}
+          // exiting={FadeOutDown}
           className={` h-[60px]  px-4 shadow shadow-gradientLight self-center flex-row  items-center justify-between rounded-2xl bottom-0 absolute w-[92%]  bg-[#000000]`}>
           <View className="flex items-center flex-row">
             <Text className="text-white font-medium text-lg">

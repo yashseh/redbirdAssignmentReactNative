@@ -17,6 +17,8 @@ import {useDispatch} from 'react-redux';
 import {mockProducts} from '@adapters/mockData';
 import ProductCard from './ProductCard';
 import HomeEmpty from './HomeEmpty';
+import {useNavigation} from '@react-navigation/native';
+import {NavigationProps} from '@navigation/types';
 
 type IProductsSectionListProps = {
   currentProductIndex: number; // The index of the currently selected product section
@@ -34,6 +36,7 @@ const ProductsSectionList: React.FC<IProductsSectionListProps> = ({
   const [currentIndex, setCurrentIndex] = useState(currentProductIndex);
   const flatListRef = useRef<FlatList>(null);
   const [refreshing, setIsRefreshing] = useState(false);
+  const navigation = useNavigation<NavigationProps>();
   const dispatch = useDispatch<AppDispatch>();
 
   // Sync the local state with the currentProductIndex prop when it changes
@@ -70,6 +73,9 @@ const ProductsSectionList: React.FC<IProductsSectionListProps> = ({
 
   //Handle press events on product cards
   const onPressCard = (item: IProduct) => {
+    navigation.navigate('productDetails', {
+      product: item,
+    });
     // router.push({ pathname: '/productDetails', params: { product: JSON.stringify(item) } });
   };
 
@@ -95,7 +101,7 @@ const ProductsSectionList: React.FC<IProductsSectionListProps> = ({
     ({item}: {item: IProduct}) => (
       <ProductCard
         cardDetails={item}
-        onPressCard={() => console.log(item)}
+        onPressCard={() => onPressCard(item)}
         isLoading={isLoading}
       />
     ),

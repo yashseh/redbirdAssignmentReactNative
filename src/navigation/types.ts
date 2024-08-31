@@ -7,6 +7,9 @@ export type RootStackParamList = {
   checkout: undefined;
   home: undefined;
   orderSuccess: undefined;
+  productDetails: {
+    product: IProduct;
+  };
 };
 
 export type NavigationProps = NavigationProp<RootStackParamList>;
@@ -17,6 +20,7 @@ type IScreenType = {
   home: 'home';
   checkout: 'checkout';
   orderSuccess: 'orderSuccess';
+  productDetails: 'productDetails';
 };
 
 //routes name definitions
@@ -25,4 +29,5 @@ export const routNames: IScreenType = {
   checkout: 'checkout',
   home: 'home',
   orderSuccess: 'orderSuccess',
+  productDetails: 'productDetails',
 };
