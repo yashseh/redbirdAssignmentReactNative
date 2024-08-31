@@ -76,7 +76,6 @@ const ProductsSectionList: React.FC<IProductsSectionListProps> = ({
     navigation.navigate('productDetails', {
       product: item,
     });
-    // router.push({ pathname: '/productDetails', params: { product: JSON.stringify(item) } });
   };
 
   // Render a single section of products
@@ -87,8 +86,11 @@ const ProductsSectionList: React.FC<IProductsSectionListProps> = ({
         numColumns={2}
         ItemSeparatorComponent={itemSeparator}
         showsVerticalScrollIndicator={false}
+        keyExtractor={(item, index) => `${item.id}${index}`}
         contentContainerStyle={styles.innerFlatListContent}
         columnWrapperStyle={styles.columnWrapper}
+        ListFooterComponent={<View />}
+        ListFooterComponentStyle={styles.footer}
         style={styles.innerFlatList}
         renderItem={renderItemSec}
       />
@@ -147,5 +149,8 @@ const styles = StyleSheet.create({
   innerFlatList: {width: windowWidth},
   separator: {
     height: verticalScale(16),
+  },
+  footer: {
+    height: verticalScale(80),
   },
 });

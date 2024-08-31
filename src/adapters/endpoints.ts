@@ -4,5 +4,5 @@ export const endpoints = {
   categories: BASE_URL + '/api/categories?populate=*',
   products:
     BASE_URL +
-    '/api/product?populate[banner]=*&populate[category][populate][banner]=*',
+    '/api/product?populate[banner]=*&populate[category][populate][banner]=*?pagination[page]=1&pagination[pageSize]=50',
 };

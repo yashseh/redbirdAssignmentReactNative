@@ -6,12 +6,13 @@ import LottieView from 'lottie-react-native';
 import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import {animations} from '@assets/exporter';
+import {NavigationProps} from '@navigation/types';
 
 const OrderSuccess = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
 
   const navigateToNextScreen = () => {
-    navigation.goBack();
+    navigation.navigate('home');
   };
 
   return (

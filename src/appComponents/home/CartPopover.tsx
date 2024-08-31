@@ -17,9 +17,10 @@ import {
   cartTotalFromState,
   deleteCart,
 } from '@state/slices/cart/CartSlice';
-import {useNavigation} from '@react-navigation/native';
-import {NavigationProps} from '@navigation/types';
+import {RouteProp, StackActions, useNavigation} from '@react-navigation/native';
+import {NavigationProps, RootStackParamList} from '@navigation/types';
 import {productsFromState} from '@state/slices/products/ProductsSlice';
+import {useRoute} from '@react-navigation/native';
 
 type ICartPopoverProps = {
   children: React.ReactNode;
@@ -29,6 +30,7 @@ type ICartPopoverProps = {
 const CartPopover: React.FC<ICartPopoverProps> = ({children, styles}) => {
   const dispatch = useDispatch();
   const navigation = useNavigation<NavigationProps>();
+  const route = useRoute<RouteProp<RootStackParamList>>();
   const products = useSelector(productsFromState);
   const cartProducts = useSelector(cartProductsFromState);
   const cartTotal = useSelector(cartTotalFromState);
@@ -45,8 +47,8 @@ const CartPopover: React.FC<ICartPopoverProps> = ({children, styles}) => {
       {children}
       {cartProducts.length > 0 && products.length > 0 && (
         <Animated.View
-          // entering={FadeInDown}
-          // exiting={FadeOutDown}
+          entering={FadeInDown}
+          exiting={FadeOutDown}
           className={` h-[60px]  px-4 shadow shadow-gradientLight self-center flex-row  items-center justify-between rounded-2xl bottom-0 absolute w-[92%]  bg-[#000000]`}>
           <View className="flex items-center flex-row">
             <Text className="text-white font-medium text-lg">

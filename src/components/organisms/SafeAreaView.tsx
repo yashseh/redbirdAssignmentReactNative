@@ -14,6 +14,7 @@ import {getColor} from '@utils/GetColor';
 type ISafeAreaViewProps = {
   children: React.ReactNode;
   paddingHorizontal?: boolean;
+  hideTopSpace?: boolean;
   hideBottomSpace?: boolean;
   styles?: StyleProp<ViewStyle>;
 };
@@ -21,6 +22,7 @@ type ISafeAreaViewProps = {
 const SafeAreaView: React.FC<ISafeAreaViewProps> = ({
   children,
   paddingHorizontal,
+  hideTopSpace,
   hideBottomSpace,
   styles,
 }) => {
@@ -30,7 +32,7 @@ const SafeAreaView: React.FC<ISafeAreaViewProps> = ({
       style={[
         style.container,
         {
-          paddingTop: insetsTop,
+          paddingTop: hideTopSpace ? 0 : insetsTop,
           paddingBottom: hideBottomSpace ? 0 : insetsBottom,
         },
         paddingHorizontal && {paddingHorizontal: verticalScale(16)},

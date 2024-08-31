@@ -34,15 +34,13 @@ const CheckoutTotalView: React.FC<ICheckoutTotalViewProps> = ({total}) => {
   const amountToPay = useMemo(() => tax + total, [total]);
 
   const onPressCheckout = () => {
+    navigation.navigate('orderSuccess');
     dispatch(deleteCart());
-    navigation.dispatch(
-      StackActions.replace(routNames.orderSuccess), // 'OrderSuccess' is the name of the route you want to navigate to
-    );
   };
 
   return (
     <Animated.View
-      //  exiting={FadeOutDown}
+      exiting={FadeOutDown}
       style={[styles.container]}
       className="bg-blackTernary  shadow-sm shadow-yellow-500 rounded-t-lg px-4 pt-4">
       <View className="gap-y-4">

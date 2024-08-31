@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {memo, useEffect, useState} from 'react';
 
 import Animated, {SharedTransition, withSpring} from 'react-native-reanimated';
 
@@ -81,11 +81,9 @@ const ProductCard: React.FC<IProductCardProps> = ({
             </View>
           </>
         ) : (
-          // Display the product details when the data is loaded
           <>
             {cardDetails?.banner && (
               <Animated.Image
-                sharedTransitionTag={`${cardDetails.id}${cardDetails.name}`}
                 style={styles.burger}
                 resizeMode={'contain'}
                 defaultSource={images.placeholderImage}
@@ -165,7 +163,7 @@ const ProductCard: React.FC<IProductCardProps> = ({
   );
 };
 
-export default ProductCard;
+export default memo(ProductCard);
 
 const styles = StyleSheet.create({
   container: {

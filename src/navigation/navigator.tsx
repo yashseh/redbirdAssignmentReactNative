@@ -22,16 +22,13 @@ const Navigator = () => {
       <Stack.Screen name={routNames.splash} component={Splash} />
       <Stack.Screen name={routNames.home} component={Home} />
       <Stack.Screen name={routNames.orderSuccess} component={OrderSuccess} />
-      <Stack.Screen
-        options={{
-          presentation: Platform.OS === 'ios' ? 'transparentModal' : 'card',
-          animation: Platform.OS === 'android' ? 'simple_push' : 'fade',
-        }}
-        name={routNames.productDetails}>
+      <Stack.Screen name={routNames.productDetails}>
         {props => <ProductDetails {...props} />}
       </Stack.Screen>
       <Stack.Screen
-        options={{animation: 'slide_from_bottom'}}
+        options={{
+          animation: 'slide_from_bottom',
+        }}
         name={routNames.checkout}
         component={Checkout}
       />

@@ -1,4 +1,11 @@
-import {FlatList, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  FlatList,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import React, {useCallback} from 'react';
 import {CheckoutCard, CheckoutTotalView} from '@appComponents/checkout';
 import {animations} from '@assets/exporter';

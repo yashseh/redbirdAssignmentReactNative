@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import CategoryHomeCard from './CategoryHomeCard';
 import {ICategory} from '@state/slices/products/types';
 import {mockCategories} from '@adapters/mockData';
+import {verticalScale} from '@constants/Metrics';
 
 type IHomeCategoriesViewProps = {
   categories: ICategory[];
@@ -51,6 +52,7 @@ const HomeCategoriesView: React.FC<IHomeCategoriesViewProps> = ({
           />
         ))}
       </View>
+      <View style={styles.spacer} />
     </ScrollView>
   );
 };
@@ -59,4 +61,7 @@ export default HomeCategoriesView;
 
 const styles = StyleSheet.create({
   categoryList: {flexDirection: 'row', gap: 24},
+  spacer: {
+    width: verticalScale(16),
+  },
 });

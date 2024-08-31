@@ -86,7 +86,6 @@ const ProductDetails: React.FC<IProductDetailsProps> = ({route}) => {
           <Header title={productDetails?.name ?? ''} />
           {productDetails?.banner && (
             <Animated.Image
-              sharedTransitionTag={`${productDetails.id}${productDetails.name}`}
               style={styles.banner}
               resizeMode={'contain'}
               defaultSource={images.placeholderImage}
