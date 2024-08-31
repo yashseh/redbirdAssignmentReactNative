@@ -1,79 +1,115 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Here's a revised and extended version of your documentation:
 
-# Getting Started
+---
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+# Restaurant POS System - Food Ordering Module
 
-## Step 1: Start the Metro Server
+Hello everyone,  
+I am Yash, and I'd like to introduce you to our Restaurant POS System's Food Ordering Module.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## 📱 Brief Description
 
-To start Metro, run the following command from the _root_ of your React Native project:
+This application is a food ordering module designed specifically for a POS (Point of Sale) system. It enables restaurant staff to browse the menu, add items to the cart, adjust quantities, and place orders efficiently. The app is built using React Native, ensuring a smooth experience on both iOS and Android devices.
+
+## ✨ Features
+
+- **Menu Navigation:** Browse and select menu items organized by categories.
+- **Cart Management:** Add items to the cart, adjust quantities, and remove items as needed.
+- **Order Summary:** Review and place orders with a detailed summary of the items in the cart.
+- **Cross-Platform Compatibility:** Responsive design that works seamlessly on both iOS and Android devices.
+- **Backend Integration:** Integration with a mock backend API using Strapi for data management.
+
+## 🗂 Folder Structure & Styling
+
+### Folder Structure
+
+The app is organized using the **Atomic Design methodology** (Organism methodology), which breaks down the UI into independent, reusable components. This structure is highly beneficial for scaling the project, ensuring maintainability, and promoting consistency across the application.
+
+- **Atoms:** Basic building blocks like buttons, text inputs, and icons.
+- **Molecules:** Combinations of atoms working together, such as form fields or a card with an image and text.
+- **Organisms:** More complex UI elements composed of molecules and atoms, like a menu list or a cart summary.
+- **Templates:** Layouts that arrange organisms to form pages.
+- **Pages:** Final views rendered to the user.
+
+### Styling
+
+For styling, I've used a combination of **React Native's default styling options** and **Tailwind CSS** (via NativeWind), providing a clean, modern, and responsive design. This hybrid approach leverages the strengths of both libraries, offering flexibility and efficiency in styling components.
+
+## ⚙️ Setup Instructions
+
+To get started with the application, follow these steps:
+
+### Step 1: Install Node Modules
+
+Open your terminal, navigate to the app's root directory, and install the necessary dependencies:
 
 ```bash
-# using npm
+npm install
+```
+
+### Step 2: Start the Metro Server
+
+Metro Bundler is the JavaScript bundler that ships with React Native. Start it by running:
+
+```bash
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Start your Application
+This command will start the Metro Bundler in a terminal window. Let it continue running while you develop your application.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### Step 3: Start Your Application
 
-### For Android
+With Metro Bundler running, open a new terminal in the root of your React Native project. Depending on your development environment, use the following commands to run the app on an Android Emulator or iOS Simulator.
 
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
+#### For iOS:
 
 ```bash
-# using npm
+# Using npm
 npm run ios
 
 # OR using Yarn
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+#### For Android:
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```bash
+# Using npm
+npm run android
 
-## Step 3: Modifying your App
+# OR using Yarn
+yarn android
+```
 
-Now that you have successfully run the app, let's modify it.
+If everything is set up correctly, your new app should appear on your Android Emulator or iOS Simulator shortly. Alternatively, you can also run the app directly from within Android Studio or Xcode.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+### Troubleshooting:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+If you encounter any issues, ensure that your Android Emulator or iOS Simulator is correctly configured and that all dependencies are installed.
 
-## Congratulations! :tada:
+## 📚 Additional Information
 
-You've successfully run and modified your React Native App. :partying_face:
+### Design Choices
 
-### Now what?
+The app's UI/UX design is centered around ease of use, with a clean and modern interface. Tailwind CSS was chosen for its utility-first approach, allowing for rapid development and responsive design. The Atomic Design methodology ensures that the app is modular and scalable, making future enhancements easier to implement.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### Backend Integration
 
-# Troubleshooting
+The app uses **Strapi** as a mock backend API. Strapi provides endpoints for retrieving menu items, categories, and handling order submissions, which simulate interactions with a real server.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Future Improvements
 
-# Learn More
+- **Real-Time Order Tracking:** Implement real-time order tracking for customers.
+- **User Authentication:** Add user authentication for a personalized experience.
+- **Integration with Payment Gateways:** Enable seamless payment processing directly from the app.
 
-To learn more about React Native, take a look at the following resources:
+## 📞 Contact Information
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+If you have any questions or need further assistance, feel free to reach out:
+
+- **GitHub:** [Your GitHub Username](https://github.com/your-username)
+- **Email:** your.email@example.com
+
+---
+
+This version of the documentation is more detailed, clearly explaining the purpose of the app, its features, the project structure, and how to set it up and run it. It also provides additional sections for design choices and future improvements, giving a more comprehensive overview of your project.
