@@ -95,21 +95,6 @@ The app's UI/UX design is centered around ease of use, with a clean and modern i
 
 ### Backend Integration
 
-The app uses **Strapi** as a mock backend API. Strapi provides endpoints for retrieving menu items, categories, and handling order submissions, which simulate interactions with a real server.
-
-### Future Improvements
-
-- **Real-Time Order Tracking:** Implement real-time order tracking for customers.
-- **User Authentication:** Add user authentication for a personalized experience.
-- **Integration with Payment Gateways:** Enable seamless payment processing directly from the app.
-
-## 📞 Contact Information
-
-If you have any questions or need further assistance, feel free to reach out:
-
-- **GitHub:** [Your GitHub Username](https://github.com/your-username)
-- **Email:** your.email@example.com
-
----
+The app uses **Strapi** as a mock backend API. Strapi provides endpoints for retrieving menu items, categories
 
 This version of the documentation is more detailed, clearly explaining the purpose of the app, its features, the project structure, and how to set it up and run it. It also provides additional sections for design choices and future improvements, giving a more comprehensive overview of your project.
